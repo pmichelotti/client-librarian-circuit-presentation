@@ -1,0 +1,15 @@
+<div style="text-align : center;">
+	<img src="slides/dependency-determination-flow.png" style="max-height : 80%;" />
+</div>
+
+<aside class="notes">
+    The library dependencies of a particular page are determined by an implementation of the DependencyProvider interface
+
+    The default implementation provided with the Librarian looks to the resources which are descendents of the current page and, given the sling:resourceType where defined, looks up the dependencies in the component definition associated with the resource type
+
+    Any number of custom implementations may be provided by creating OSGI service implementations of the DependencyProvider interface.
+
+    When determining page dependencies, all available dependency providers are polled to see if they know of dependencies for the page in question.
+
+    Use cases might include Determining additional Dependencies based on Page property values and Determining additional dependencies based on Design properties
+</aside>

@@ -1,0 +1,13 @@
+<h2>Dynamic Variable Binding</h2>
+
+<p>Provides a means to define dynamic CSS and JS serverside.</p>
+
+<p>Variable placeholders, demarcated be using the placeholder syntax, are replaced by bindings provided by VariableProvider Implementations.</p>
+
+<aside class="notes">
+    In the case of less, this replacement occurs on the .less files prior to compilation. 
+
+    There are no VariableProvider Implementations provided by the Librarian itself.
+
+    Your project(s) may expose any number of VariableProvider Implementations. During composition, the Librarian will poll all known VariableProvider OSGI service implementations for bindings and will then apply all found bindings to the library being composed.
+</aside>
